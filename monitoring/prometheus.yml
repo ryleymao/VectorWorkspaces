@@ -1,0 +1,17 @@
+# Prometheus Configuration
+# This tells Prometheus what to scrape (collect metrics from)
+
+global:
+  scrape_interval: 15s  # How often to collect metrics
+  evaluation_interval: 15s
+
+# What to scrape (where to get metrics from)
+scrape_configs:
+  # Scrape metrics from our FastAPI app
+  - job_name: 'knowledge-agent-api'
+    static_configs:
+      - targets: ['host.docker.internal:8000']  # Your FastAPI app
+        labels:
+          service: 'api'
+          environment: 'development'
+
