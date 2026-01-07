@@ -1,4 +1,4 @@
-# Multi-Tenant Knowledge Platform
+# VectorWorkspaces
 
 > Multi-tenant, API-first knowledge platform with complete tenant isolation, versioned storage, and async processing. Features a RAG-powered query interface and modern React frontend.
 
